@@ -118,7 +118,9 @@ section {
 #projects {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: 35px;
+  align-items: center;
   padding-top:35px;
 }
 
