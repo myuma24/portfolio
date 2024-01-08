@@ -8,14 +8,14 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Poppins, sans-serif;
+#projects {
   height: 100vh;
-  color: #dedede;
-  background-color: hsl(210, 10%, 8%);
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .card {

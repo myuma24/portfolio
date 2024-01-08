@@ -1,35 +1,47 @@
 body {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: #0A0A0A;
+  color: rgb(255, 255, 255);
   margin: unset;
+
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 header {  
   background-image: url('images/homeimg.png');
-  background-size: 625px;
+  background-size: 700px;
   background-repeat: no-repeat;
   background-position-x: 80%;
-  height: 608px;
+  background-position-y: 100%;
+  height: 700px;
   width: auto;
-}
-
-#shape {    
-  height: 608px;
-  width: 357px;
-  background-color: #124150;
-  position: absolute;
-  left: 70%;
-  top: 14%;
-  z-index: -1;
   overflow: hidden;
 }
 
+#shape {    
+  height: 1000px;
+  width: 357px;
+  background-color: #70161e;
+  position: absolute;
+  left: 70%;
+  position: relative;
+  z-index: -1;
+}
+
 nav {
-  height: 90px;
+  height: 75px;
   width: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
+  background-color: #0A0A0A;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 nav ul {
@@ -38,7 +50,6 @@ nav ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 50px;
 }
 
 nav ul li {
@@ -50,8 +61,12 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-family: 'Lalezar', serif;
-  font-size: 24px;
-  color: rgb(0, 0, 0);
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
+nav ul li a:hover {
+  color: #EF6F6C;
 }
 
 #info {
@@ -59,17 +74,20 @@ nav ul li a {
   top: 350px;
 }
 
-#intro {
-  font-family: 'Linden Hill', serif;
-  font-size: 20px;
+#intro {  
+  font-family: 'League Spartan', serif;
+  font-size: 88px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  text-decoration: none;
   margin: unset;
   margin-left: 166px;
 }
 
 #logo {
-  padding-top: 20px;
-  padding-left: 20px;
-  width: 82px;
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 70px;
   height: auto;
 }
 
@@ -83,10 +101,9 @@ nav ul li a {
 }
 
 .projectdes {
-  font-family: 'Linden Hill';
-  font-size: 20px;
-  padding-top: 15px;
-  padding-bottom: 60px;font-weight: 300;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 section {    
@@ -97,13 +114,12 @@ section {
 
 /* MAIN PROJECTS */
 
-#main {
-  background-color: white;
-}
+
 #projects {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top:35px;
 }
 
 
@@ -121,7 +137,7 @@ section {
   width: 280px;
   aspect-ratio: 1 / 1.3;
   padding: 24px;
-  background-color: hsl(210, 20%, 15%);
+  background-color: #21252c;
   border-radius: 24px;
   box-shadow: 0px 0px 20px -1.5px hsl(0 0% 0% / 0.5);
   position: relative;
@@ -153,7 +169,7 @@ section {
 }
 
 .card-content .sub-title {
-  color: #ccc;
+  color: #ffffff;
   font-size: 16px;
   margin-bottom: 4px;
 }
@@ -172,7 +188,7 @@ section {
 }
 .card:hover .icon {
   rotate: 0deg;
-  color: #7988d2;
+  color: #EF6F6C;
 }
 
 .main-content > .title {
@@ -184,7 +200,7 @@ section {
   content: "";
   position: absolute;
   inset: 1px;
-  background-color: hsl(291, 49%, 89%);
+  background-color: #F9F8F8;
   z-index: -1;
   border-radius: inherit;
   transition: all 0.35s ease;
@@ -194,32 +210,23 @@ section {
   box-shadow: 0px 0px 20px -5px #000;
 }
 
-
-/* SCROLL BAR DESIGN */
-::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #F5F5F5;
-}
-
-::-webkit-scrollbar
-{
-  width: 6px;
-  background-color: #F5F5F5;
-}
-
-::-webkit-scrollbar-thumb
-{
-  background-color: #000000;
-}
-
 /* CARD */
-#gallery {
-  font-family: "Space Mono", monospace;
-  color: white;
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gallery {
+  font-family: 'League Spartan', sans-serif; 
+  height: 100vh;
+  background-color: #0A0A0A;
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 20px;
 }
 
 .grid {
@@ -241,6 +248,12 @@ section {
   position: relative;
   cursor: pointer;
   overflow: hidden;
+}
+
+.box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .box-img,
@@ -365,11 +378,9 @@ section {
 /* Styling the Content inside box */
 .box-box > p {
   font-size: 10px;
-  text-transform: uppercase;
   font-weight: bold;
   opacity: 0.85;
 }
-
 
 /* NAME ANIMATION */
 #nameDiv {
@@ -389,7 +400,7 @@ section {
   letter-spacing: 8px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   position: relative;
 }
@@ -403,13 +414,15 @@ section {
   transition: 0.3s ease-out;
 }
 #name:hover::before {
-  color: #222225;
+  
+  color: #EF6F6C;
   transform: translate(5px, -5px);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
 }
 #name:hover::after {
-  color: #c78594;
+  
+  color: #70161E;
   transform: translate(12px, -12px);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
@@ -430,4 +443,35 @@ footer {
   height: 111px;
   width: auto;
   padding: 1em;
+}
+
+/* KEY FRAMES */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* SCROLL BAR DESIGN */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c9c9c9;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: #868686;
 }
