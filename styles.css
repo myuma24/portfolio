@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #0A0A0A;
   color: rgb(255, 255, 255);
@@ -72,6 +80,8 @@ nav ul li a:hover {
 #info {
   position: absolute;    
   top: 350px;
+  margin-left: 15%;
+
 }
 
 #intro {  
@@ -81,7 +91,6 @@ nav ul li a:hover {
   letter-spacing: 8px;
   text-decoration: none;
   margin: unset;
-  margin-left: 166px;
 }
 
 #logo {
@@ -89,6 +98,8 @@ nav ul li a:hover {
   padding-left: 10px;
   width: 70px;
   height: auto;
+
+  animation: growAnimation 1s;
 }
 
 
@@ -97,7 +108,6 @@ nav ul li a:hover {
   font-size: 18px;
   font-weight: 400;
   margin: unset;
-  margin-left: 166px;
 }
 
 .projectdes {
@@ -112,7 +122,19 @@ section {
   padding-right: 20%;
 }
 
+#aboutdes {
+  display: flex;
+  flex-direction: row;
+}
+
+#frontprofile{
+  height: 400px;
+  width: auto;
+  border-radius: 25px;
+}
+
 /* MAIN PROJECTS */
+
 
 
 #projects {
@@ -122,18 +144,10 @@ section {
   gap: 35px;
   align-items: center;
   padding-top:35px;
+
+  animation: growAnimation 0.25s;
 }
 
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
- *,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .card {
   width: 280px;
@@ -213,17 +227,9 @@ section {
 }
 
 /* CARD */
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .gallery {
   font-family: 'League Spartan', sans-serif; 
-  height: 100vh;
   background-color: #0A0A0A;
   color: rgb(255, 255, 255);
   display: flex;
@@ -391,8 +397,6 @@ section {
   justify-content: center;
   align-items: center;
   margin: unset;
-  margin-left: 166px;
-  padding-top: 10px;
   padding-bottom: 20px;
 }
 
@@ -405,6 +409,7 @@ section {
   color: #ffffff;
   text-align: center;
   position: relative;
+  margin: unset;
 }
 
 #name::before,
@@ -455,6 +460,15 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes growAnimation {
+  from {
+    transform: scale(0); /* Start with the element scaled down to nothing */
+  }
+  to {
+    transform: scale(1); /* Scale the element up to its full size */
   }
 }
 
