@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maggie Ma</title>
+    <title>Portfolio | Maggie Ma</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="images/logo2.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,17 +23,20 @@
     <nav>
         <img src = "images/logo2.png" alt = "logo" id = "logo">
         <ul>
+          <li class="dropdown">
+            <a href="index.html">Home</a>
+            <!-- <div class="dropdown-content">
+                <a href="explore.html">Explore</a>
+            </div> -->
+          </li>
             <li>
-                <a href = "#">About</a>
+                <a href = "about.html">About</a>
             </li>
             <li>
-                <a href = "#">Work</a>
+                <a href = "resume.html">Resume</a>
             </li>
             <li>
-                <a href = "#">Resume</a>
-            </li>
-            <li>
-              <a href = "#">Resources</a>
+              <a href = "resources.html">Resources</a>
           </li>
         </ul>
     </nav>
@@ -41,10 +45,10 @@
         <div id = "info">
             <p id = "intro">Hello I'm,</p>
             <div id = "nameDiv">
-                <h1 data-text="Maggie Ma!" id = "name">Maggie Ma!</h1>
+                <h1 data-text="Maggie Ma!" id = "name"><a href = "about.html">Maggie Ma!</a></h1>
             </div>
             <p id = "description">UI/UX Designer looking for the extraordinary in a sea of ordinary.</p>
-            <i class="fa-solid fa-circle-arrow-down fa-bounce fa-2xl" style="color: #ef6f6c; padding-top: 40px;"></i>
+            <i class="fa-solid fa-circle-arrow-down fa-bounce fa-2xl" style="color: #ef6f6c; padding-top: 70px;"></i>
         </div>
         <div id = "shape"></div>
     </header>
@@ -213,47 +217,23 @@
         </div>
     </section>
 
-    <section class = "aboutme">
+    <!-- <section class = "aboutme">
       <h1 id = "aboutme">About Me</h1>
       <div id = "aboutdes">
         <img src = "images/maggie.jpg" alt = "maggie" id = "frontprofile">
-        <div>
+        <div id = "aboutcontent">
           <p>I'm Maggie, an explorer, a curious soul navigating the currents of life, always seeking to uncover the exceptional in the seemingly mundane. By day I am a student, at night I quest to explore the unexplored and making the journey not just about the destination, but the conversations created along the way!</p>
           <p>This portfolio highlights many of the things I’ve done throughout my education, my personal hobbies, and my career. I’m always learning new things and gaining new skills through my journey of exploring the undiscovered.</p>
+          
+          <h3>Connect with me!</h3>
+          <div class ="socialmedia"><i class="fab fa-linkedin fa-xl"></i><p>LinkedIn</p></div>
         </div>
       </div>
-    </section>
-
-    <section class = "resources">
-      <h1 id = "resources">Designers Best Friend</h1>
-      <a href = "https://coolors.co/">Coolors</a>
-      <a href = "https://www.posemaniacs.com/">Posing</a>
-      <a href = "https://fontawesome.com/">Icons</a>
-      <a href = "https://www.designmethods.co.uk/ux-research">Design Methods</a>
-      <a href = "https://animista.net/play/basic/slide-fwd/slide-fwd-center">CSS Animations</a>
-      <a href = "https://my.crate.as/">Free Assets</a>
-      <a href = "https://uiball.com/ldrs/">Loaders</a>
-      <a href = "https://drive.google.com/drive/folders/1pM-Asxa-ece4IGR4xlymo2y9gSeFMPCX?usp=sharing">Assets</a>
-      <a href = "https://creatoom.com/">Mockups</a>
-      <a href = "https://shape.method.ac/">Font Practice</a>
-      <a href = "https://color.method.ac/">Color Theory</a>
-      <a href = "https://bezier.method.ac/">Curves</a>
-      <a href = "https://cantunsee.space/">Visualization</a>
-      <a href = "https://www.monotype.com/font-pairing#/playground?fontPair1=PerpetuaMTPro-Regular&fontPair2=Gill+Sans+MT+Pro+Book">Font Pairing</a>
-
-
-    </section>
+    </section> -->
 
     <footer>
-        <p>Designed by: Maggie Ma</p>
-
-        <nav id = "socialmedia">
-          <h3>Connect with me!</h3>
-          <ul class="social">
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fab fa-slack"></i></a></li>
-          </ul>
-        </nav>
+        <p>Portfolio by Maggie Ma</p>
+        <div class ="socialmedia"><a href = "https://www.linkedin.com/in/maggiema209/"><i class="fab fa-linkedin fa-xl"></i></i></a></div>
     </footer>
 </body>
 </html>
