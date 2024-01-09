@@ -574,8 +574,29 @@ background-color: #868686;
 #aboutMe {
   display: flex;
   flex-direction: row;
-  gap: 250px;
+  gap: 200px;
   padding-top: 150px;
+}
+
+#mainAB {
+  font-family: 'League Spartan';
+  font-size: 60px;
+  font-weight: 700;
+  margin: unset;
+}
+
+.mDes {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: unset;
+  padding: 0;
+}
+
+#aboutSec {
+  display:flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 #aboutSec, #profileSec {
@@ -592,13 +613,13 @@ background-color: #868686;
 }
 
 #squareShape {
-  height: 500px;
+  height: 440px;
   width: 300px;
   background-color: #092E31;
   position: absolute;
   z-index: -1;
-  left: 30%; /* Adjust the percentage as needed */
-  top: 10%;
+  left: 33%; /* Adjust the percentage as needed */
+  top: 8%;
 }
 
 
@@ -621,4 +642,49 @@ background-color: #868686;
   display: flex;
   flex-direction: column;
   gap: 50px;
+}
+
+#profileSec h1, h2, p{
+  font-family: 'League Spartan', sans-serif;
+}
+
+#resume h1, h2, h3{
+  font-family: 'League Spartan', sans-serif;
+
+}
+
+#experience {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 30px ;
+}
+
+#educationsec {
+  padding-left: 30px;
+}
+
+
+/* RESOURCES */
+
+#resourcesTitle{
+  font-family: 'League Spartan', sans-serif;
+  font-size: 50px;
+}
+
+.resources p {
+  padding-bottom: 20px;
+}
+
+#resourceList {
+  display: flex;
+  flex-direction: column;
+}
+
+#resourceList a {
+  text-decoration: none;
+}
+
+#resourceList a:hover {
+  color: #EF6F6C;
 }
