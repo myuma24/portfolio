@@ -9,11 +9,11 @@
 body {
   background-color: #0A0A0A;
   color: rgb(255, 255, 255);
-  margin: unset;
 
   animation: fadeIn 1s ease-in-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+
 }
 
 header {  
@@ -570,3 +570,55 @@ background-color: #868686;
 .dropdown:hover > a {
   background-color: #000000;
 } */
+
+#aboutMe {
+  display: flex;
+  flex-direction: row;
+  gap: 250px;
+  padding-top: 150px;
+}
+
+#aboutSec, #profileSec {
+  width: 50%;
+}
+
+#aboutMe img {
+  width: 400px;
+  height: auto;
+}
+
+#profileSec {
+  position: relative;
+}
+
+#squareShape {
+  height: 500px;
+  width: 300px;
+  background-color: #092E31;
+  position: absolute;
+  z-index: -1;
+  left: 30%; /* Adjust the percentage as needed */
+  top: 10%;
+}
+
+
+#circleShape {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: #001314;
+  z-index: -1;
+  position: absolute;
+  left: -25%;
+  top: -10%;
+}
+
+#profileDetails {
+  background-color: #0A0A0A;
+}
+
+#profileSec {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
