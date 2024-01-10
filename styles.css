@@ -603,7 +603,7 @@ background-color: #868686;
   width: 50%;
 }
 
-#aboutMe img {
+#img-Container img {
   width: 400px;
   height: auto;
 }
@@ -611,6 +611,18 @@ background-color: #868686;
 #profileSec {
   position: relative;
 }
+
+#techIcons{
+  width: 220px;
+  height: auto;
+  padding: 10px;
+}
+
+#codingSkills{
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
 
 #squareShape {
   height: 440px;
@@ -622,6 +634,9 @@ background-color: #868686;
   top: 8%;
 }
 
+#langList {
+  padding-left: 30px;
+}
 
 #circleShape {
   height: 400px;
@@ -679,6 +694,7 @@ background-color: #868686;
 #resourceList {
   display: flex;
   flex-direction: column;
+  width: 300px;
 }
 
 #resourceList a {
@@ -687,4 +703,54 @@ background-color: #868686;
 
 #resourceList a:hover {
   color: #EF6F6C;
+}
+
+/* galleryhtml */
+
+.divMain {
+  display: flex;
+  justify-content: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+
+.gallery1 {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    transition: 0.1s;
+}
+
+.gallery1 .gallery__image {
+    filter: grayscale(80%);
+} .gallery__link:hover .gallery__image {
+    filter: grayscale(0);
+}
+
+.gallery__column {
+    display: flex;
+    flex-direction: column;
+    width: 33.333%;
+    height: 100%;
+}
+
+.gallery__link {
+    margin: 5px;
+    overflow: hidden;
+}
+
+.gallery__thumb {
+    position: relative;
+    margin: 0;
+}
+
+.gallery__image {
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.gallery__image:hover {
+    transform: scale(1.1);
 }
