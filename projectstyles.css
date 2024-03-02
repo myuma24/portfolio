@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: rgb(255, 255, 255);
+
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+nav {
+    height: 75px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #0A0A0A;
+  
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+  
+nav ul {
+    padding: unset;
+    margin: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    list-style: none;
+    padding-right: 5em;
+    padding-top: 30px;
+}
+  
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Lalezar', serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+  
+nav ul li a:hover {
+    color: #EF6F6C;
+}
+
+#logo {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 70px;
+    height: auto;
+    animation: growAnimation 1s;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+    gap: 50px;
+}
+
+h1, h2, p{
+    font-family: 'League Spartan', sans-serif;
+    margin: unset;
+    padding: unset;
+}
+
+#myRole {
+    width: 75%;
+}
+
+#tools {
+    padding:unset;
+}
+
+#tools h1{
+    margin: unset;
+}
+
+.toolsDuration {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+.section-a {
+    margin: 2rem 0;
+}
+  
+.section-a .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+  
+.section-a h1 {
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+  
+.section-a p {
+    margin: 1rem 0;
+}
