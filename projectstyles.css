@@ -95,8 +95,8 @@ nav ul li a:hover {
 #main {
     display: flex;
     flex-direction: column;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 20%;
     gap: 50px;
 }
 
@@ -180,14 +180,6 @@ p {
     height: 700px;
 }
 
-#aggieBackground {
-    background-image: url('aggieimgs/aggierewards2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: 70%;
-    background-position-y: 50%;
-    height: 1000px;
-}
 
 #foodixgifs {
     display: flex;
