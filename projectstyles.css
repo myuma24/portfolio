@@ -187,11 +187,12 @@ p {
     width: 100%; /* Adjust this value based on your layout needs */
    }
    
-   #foodixgifs img {
+#foodixgifs img {
     width: calc(33.33% - 10px); /* Adjust the percentage and subtract the gap */
     object-fit: contain;
     margin: 5px; /* Adjust the margin as needed */
 }
+
 
 #finaldes {
     margin: unset;

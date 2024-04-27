@@ -15,6 +15,11 @@
     animation-fill-mode: forwards;
 }
 
+#hubbblegifs {
+    display: flex;
+    justify-content: center;
+}
+
 footer {
     height: 111px;
     width: auto;
