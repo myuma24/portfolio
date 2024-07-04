@@ -6,6 +6,7 @@
     var foodixDiv = document.getElementById('foodixID');
     var aggieDiv = document.getElementById('AggieRewardsID');
     var hubbleDiv = document.getElementById('hubbleID');
+    var galleryDiv = document.getElementById('Gallery');
 
     // Add a click event listener to the div
     foodixDiv.addEventListener('click', function(event) {
@@ -20,6 +21,11 @@
     hubbleDiv.addEventListener('click', function(event) {
         // Redirect the user to the desired link
         window.location.href = 'hubbble.html';
+    });
+
+    galleryDiv.addEventListener('click', function(event) {
+        // Redirect the user to the desired link
+        window.location.href = 'gallery.html';
     });
     
 })();
