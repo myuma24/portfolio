@@ -13,7 +13,6 @@ body {
   animation: fadeIn 1s ease-in-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-
 }
 
 header {  
@@ -459,7 +458,7 @@ a {
 }
 
 
-#work, #exploreHeader, #aboutme, #resources {
+#work, #exploreHeader, #aboutme, #resources, #otherHeader {
   font-family: 'League Spartan';
   font-weight: bold;
   font-size: 40px;
@@ -555,7 +554,7 @@ background-color: #868686;
 }
 
 #img-Container img {
-  width: 400px;
+  width: 500px;
   height: auto;
 }
 
@@ -574,30 +573,8 @@ background-color: #868686;
   padding-top: 5px;
 }
 
-
-#squareShape {
-  height: 440px;
-  width: 300px;
-  background-color: #092E31;
-  position: absolute;
-  z-index: -1;
-  left: 33%; /* Adjust the percentage as needed */
-  top: 8%;
-}
-
 #langList {
   padding-left: 30px;
-}
-
-#circleShape {
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
-  background-color: #001314;
-  z-index: -1;
-  position: absolute;
-  left: -25%;
-  top: -10%;
 }
 
 #profileDetails {
