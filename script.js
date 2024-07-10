@@ -8,24 +8,45 @@
     var hubbleDiv = document.getElementById('hubbleID');
     var galleryDiv = document.getElementById('Gallery');
 
+
+    var rmp = document.getElementById('RMP');
+    var graphitecture = document.getElementById('Graphitecture');
+    var croukets = document.getElementById('croukets');
+
     // Add a click event listener to the div
-    foodixDiv.addEventListener('click', function(event) {
+    foodixDiv.addEventListener('click', function() {
         // Redirect the user to the desired link
         window.location.href = 'foodix.html';
     });
-    aggieDiv.addEventListener('click', function(event) {
+    
+    aggieDiv.addEventListener('click', function() {
         // Redirect the user to the desired link
        window.location.href = 'aggierewards.html';
     });
 
-    hubbleDiv.addEventListener('click', function(event) {
+    hubbleDiv.addEventListener('click', function() {
         // Redirect the user to the desired link
         window.location.href = 'hubbble.html';
     });
 
-    galleryDiv.addEventListener('click', function(event) {
+    rmp.addEventListener('click', function() {
+        // Redirect the user to the desired link
+        window.location.href = 'restmeetplay.html';
+    });
+
+    graphitecture.addEventListener('click', function() {
+        // Redirect the user to the desired link
+        window.location.href = 'graphitecture.html';
+    });
+
+    croukets.addEventListener('click', function() {
+        // Redirect the user to the desired link
+        window.location.href = 'croukets.html';
+    });
+
+    /*     galleryDiv.addEventListener('click', function() {
         // Redirect the user to the desired link
         window.location.href = 'gallery.html';
-    });
+    }); */
     
 })();

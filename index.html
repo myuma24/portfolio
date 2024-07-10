@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Maggie Ma</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="icon" type="image/x-icon" href="images/logo2.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=League+Spartan:wght@300;400;500;700;800&family=Linden+Hill:ital@0;1&display=swap" rel="stylesheet">
-
-    <script src="script.js" defer=""></script>
-
-    <!-- font-family: 'League Spartan', sans-serif; font-family: 'Linden Hill', serif; font-family: 'Lalezar', serif; -->
 
     <!--/ /-------- Normalize CSS --------/ /-->
 	  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <!--/ /-------- Font Awesome --------/ /-->
     <script src="https://kit.fontawesome.com/06a0637350.js" crossorigin="anonymous"></script>
 	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=League+Spartan:wght@300;400;500;700;800&family=Linden+Hill:ital@0;1&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer=""></script>
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <nav>
     <img src = "images/logo2.png" alt = "logo" id = "logo">
@@ -41,81 +41,216 @@
   </nav>
 
   <header>
-        <div id = "info">
-            <p id = "intro">Hello I'm,</p>
-            <div id = "nameDiv">
-                <h1 data-text="Maggie Ma" id = "name"><a href = "about.html">Maggie Ma</a></h1>
-            </div>
-            <p id = "description">UI/UX Designer looking for the extraordinary in a sea of ordinary.</p>
-            <i class="fa-solid fa-circle-arrow-down fa-bounce fa-2xl" style="color: #ef6f6c; padding-top: 70px;"></i>
+    <div id = "info">
+        <p id = "intro">Hello I'm,</p>
+        <div id = "nameDiv">
+            <h1 data-text="Maggie Ma" id = "name"><a href = "about.html">Maggie Ma</a></h1>
         </div>
-        <div id = "shape"></div>
+        <p id = "description">UI/UX Designer looking for the extraordinary in a sea of ordinary.</p>
+        <i class="fa-solid fa-circle-arrow-down fa-bounce fa-2xl" style="color: #ef6f6c; padding-top: 70px;"></i>
+    </div>
+    <div>
+      <img src="images/homeimg.png" alt = "homeIMG" id = "headerImg">
+    </div>
   </header>
 
-  <section id = "main">
-    <h1 id = "work">Spotlight</h1>
-
-
-    <div id = "projects">
-      <div class="card" id = "hubbleID">
-        <div class="card-image">
-          <img src="images/hubble.png" alt="">
-        </div>
-              
-        <div class="card-content">
-          <p class="sub-title">UI/UX - Connections App</p>
-          <div class="main-content">
-            <h2 class="title">Hubbble</h2>
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M8 12h8" />
-                <path d="m12 16 4-4-4-4" />
-            </svg>
+  <section id = "section1" class = "sectionStyles">
+    <h1 id = "spotlight">Discover</h1>
+    <div class="container">
+      <div class="card">
+          <div class="card-inner" style="--clr:#fff;">
+              <div class="boxProj">
+              <div class="imgBox" id = "hubbleID">
+                  <img src="thumbnails/hubbbleThumb.png" alt="Hubbble">
+              </div>
+              <div class="icon">
+                  <a href="hubbble.html" class="iconBox"><span class="material-symbols-outlined">
+                    arrow_outward
+                    </span></a>
+              </div>
+              </div>
           </div>
-        </div>
-      </div>
-            
-      <div class="card" id = "AggieRewardsID">
-        <div class="card-image">
-          <img src="images/aggieawardsThumb.png" alt="">
-        </div>
-          
-        <div class="card-content">
-          <p class="sub-title">UI/UX - Loyalty App</p>
-          <div class="main-content">
-            <h2 class="title">AggieRewards</h2>
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M8 12h8" />
-            <path d="m12 16 4-4-4-4" />
-            </svg>
+          <div class="content">
+              <h3>Hubbble</h3>
+              <p>Platform for networking, community-building, and personal growth</p>
+              <ul>
+              <li style="--clr-tag:#575757;">UI/UX</li>
+              <li style="--clr-tag:#383838;">Research</li>
+              </ul>
           </div>
-        </div>
       </div>
-
-      <div class="card" id = "foodixID">
-        <div class="card-image">
-        <img src="images/foodixThumb1.png" alt="">
-        </div>
-
-        <div class="card-content">
-        <p class="sub-title">UI/UX - Equity App</p>
-        <div class="main-content">
-          <h2 class="title">Foodix</h2>
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M8 12h8" />
-          <path d="m12 16 4-4-4-4" />
-          </svg>
-        </div>
-        </div>
-      </div>
-
+          <div class="card">
+          <div class="card-inner" style="--clr:#fff;">
+              <div class="boxProj">
+              <div class="imgBox" id = "AggieRewardsID">
+                  <img src="thumbnails/aggieThumb.png" alt="AggieRewards">
+              </div>
+              <div class="icon">
+                  <a href="aggierewards.html" class="iconBox"><span class="material-symbols-outlined">
+                    arrow_outward
+                    </span></a>
+              </div>
+              </div>
+          </div>
+          <div class="content">
+              <h3>Aggie Rewards</h3>
+              <p>UC Davis rewards app for students</p>
+              <ul>
+              <li style="--clr-tag:#575757;">UI/UX</li>
+              <li style="--clr-tag:#383838;">Research</li>
+              </ul>
+          </div>
+          </div>
+          <div class="card">
+          <div class="card-inner" style="--clr:#fff;">
+              <div class="boxProj">
+              <div class="imgBox" id = "foodixID">
+                  <img src="thumbnails/foodixThumb.png" alt="Foodix">
+              </div>
+              <div class="icon">
+                  <a href="foodix.html" class="iconBox"><span class="material-symbols-outlined">
+                    arrow_outward
+                    </span></a>
+              </div>
+              </div>
+          </div>
+          <div class="content">
+              <h3>Foodix</h3>
+              <p>Mobile App Promoting Equity - Grocery delivery app that connects low income families with local foodbanks</p>
+              <ul>
+              <li style="--clr-tag:#575757;">UI/UX</li>
+              <li style="--clr-tag:#383838;">Research</li>
+              </ul>
+          </div>
+          </div>
     </div>
   </section>
 
-  <section id = "explore">
-    <h1 id = "exploreHeader">Explore</h1>
+  <section id = "section2" class = "sectionStyles">
+    <div class="container">
+        <div class="card">
+        <div class="card-inner" style="--clr:#fff;">
+            <div class="boxProj">
+            <div class="imgBox" id = "RMP">
+                <img src="thumbnails/rmpThumb.jpg" alt="rmpThumb">
+            </div>
+            <div class="icon">
+                <a href="restmeetplay.html" class="iconBox" style="background: rgb(163, 191, 209);"><span class="material-symbols-outlined">
+                  arrow_outward
+                  </span></a>
+            </div>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Rest Meet Play</h3>
+            <p>Installation that invites both interaction and a place to rest</p>
+            <ul>
+              <li style="--clr-tag:#575757;">Rhino 3D</li>
+              <li style="--clr-tag:#383838;">Research</li>
+              <li style="--clr-tag:#252525;">Installation</li>
+            </ul>
+        </div>
+        </div>
+        <div class="card">
+        <div class="card-inner" style="--clr:#fff;">
+            <div class="boxProj">
+            <div class="imgBox" id = "Graphitecture">
+                <img src="images/sfdesign/sfdesignweek.jpg" alt="sfThumb">
+            </div>
+            <div class="icon">
+                <a href="graphitecture.html" class="iconBox" style="background: rgb(209, 197, 163);"><span class="material-symbols-outlined">
+                  arrow_outward
+                  </span></a>
+            </div>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Graphitecture</h3>
+            <p>AR project that visualizes the future impact of global warming and climate change</p>
+            <ul>
+            <li style="--clr-tag:#383838;">Graphitecture</li>
+            <li style="--clr-tag:#252525;">Rhino 3D</li>
+            <li style="--clr-tag:#1f1f1f;">Augmented Reality</li>
+            </ul>
+        </div>
+        </div>
+        <div class="card">
+        <div class="card-inner" style="--clr:#fff;">
+            <div class="boxProj">
+            <div class="imgBox" id = "croukets">
+                <img src="thumbnails/crouketsThumb.png" alt="crouketsThumb">
+            </div>
+            <div class="icon">
+                <a href="croukets.html" class="iconBox" style="background: rgb(112, 153, 146);"><span class="material-symbols-outlined">
+                  arrow_outward
+                  </span></a>
+            </div>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Croukets</h3>
+            <p>Discover the future of food with innovative insect-infused snacks</p>
+            <ul>
+            <li style="--clr-tag:#575757;">Product Design</li>
+            <li style="--clr-tag:#383838;">Research</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+  </section>
+
+  <section id = "discover"  class = "sectionStyles">
+    <h1 id = "Discover">Explore</h1>
+    <div class = "gallery">
+      <div class="grid">
+        <div class="box">
+          <div class="box-img"><img src = "images/sfdesign/sfdesignweek.jpg"></div>
+            <div class="box-box box-1 top-left">
+                    <h3>Graphitecture Climate Change</h3>
+                    <p>SF Design Week 2023</p>
+            </div>
+            <div class="box-box box-4 bottom-right">
+                    <h3>Skills</h3>
+                    <p>Illustrator</p>
+                    <p>Adobe After Effects</p>
+                    <p>Rhino 3D</p>
+                    <p>Artivive</p>
+                  </div>
+           </div>
+      
+            <div class="box">
+                  <div class="box-img"><img src = "images/restmeetplayimages/play.png"></div>
+                  <div class="box-box box-var box-3">
+                    <h3>Rest Meet Play</h3>
+                    <p>3D Design Installation</p>
+                  </div>
+                  <div class="box-box box-var box-4">
+                    <h3>Skills</h3>
+                    <p>Rhino 3D</p>
+                    <p>Illustrator</p>
+                    <p>InDesign</p>
+                    <p>Mockup</p>
+                  </div>
+            </div>
+      
+            <div class="box">
+                  <div class="box-img"><img src = "images/crouketthumb.png"></div>
+                  <div class="box-box box-3 bottom-left">
+                    <h3>Gallery</h3>
+                    <p>Art in Different Mediums</p>
+                  </div>
+                  <div class="box-box box-2 top-right">
+                    <h3>Skills</h3>
+                    <p>Procreate</p>
+                    <p>Illustrator</p>
+                    <p>Photoshop</p>
+                    <p>Blender</p>
+                    <p>Womp 3D</p>
+                    <p>Traditional</p>
+                  </div>
+            </div>
+        </div>
+    </div>
 
     <div class = "gallery">
       <div class="grid">
@@ -165,63 +300,7 @@
                     <p>Traditional</p>
                   </div>
             </div>
-    </div>
-
-    </div>
-  </section>
-
-
-  <section id = "other">
-    <h1 id = "otherHeader">Discover</h1>
-
-    <div class = "gallery">
-      <div class="grid">
-        <div class="box">
-          <div class="box-img"><img src = "images/sfdesign/sfdesignweek.jpg"></div>
-            <div class="box-box box-1 top-left">
-                    <h3>Graphitecture Climate Change</h3>
-                    <p>SF Design Week 2023</p>
-            </div>
-            <div class="box-box box-4 bottom-right">
-                    <h3>Skills</h3>
-                    <p>Illustrator</p>
-                    <p>Adobe After Effects</p>
-                    <p>Rhino 3D</p>
-                    <p>Artivive</p>
-                  </div>
-           </div>
-      
-            <div class="box">
-                  <div class="box-img"><img src = "images/restmeetplayimages/IMG_0617.jpg"></div>
-                  <div class="box-box box-var box-3">
-                    <h3>Rest Meet Play</h3>
-                    <p>3D Design Installation</p>
-                  </div>
-                  <div class="box-box box-var box-4">
-                    <h3>Skills</h3>
-                    <p>Rhino 3D</p>
-                    <p>Illustrator</p>
-                    <p>InDesign</p>
-                    <p>Mockup</p>
-                  </div>
-            </div>
-      
-            <div class="box" id = "Gallery">
-                  <div class="box-img"><img src = "images/3dBath.png"></div>
-                  <div class="box-box box-3 bottom-left">
-                    <h3>Gallery</h3>
-                    <p>Art in Different Mediums</p>
-                  </div>
-                  <div class="box-box box-2 top-right">
-                    <h3>Skills</h3>
-                    <p>Procreate</p>
-                    <p>Illustrator</p>
-                    <p>Photoshop</p>
-                    <p>Blender</p>
-                    <p>Womp 3D</p>
-                    <p>Traditional</p>
-                  </div>
-            </div>
+      </div>
     </div>
   </section>
 
@@ -231,3 +310,5 @@
   </footer>
 </body>
 </html>
+
+

@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+.process img {
+    width: 100%;
+    height: auto;
+}
+
 #hubbbleBody {
     background-color: rgb(25, 23, 37, 100);
     color: rgb(255, 255, 255);
@@ -42,12 +47,7 @@ footer {
     cursor: pointer;
     color: #EF6F6C;
 }
-  
 
-img {
-    width: 100%;
-    height: auto;
-}
 
 nav {
     height: 75px;
@@ -101,8 +101,8 @@ nav ul li a:hover {
 #main {
     display: flex;
     flex-direction: column;
-    padding-left: 20%;
-    padding-right: 20%;
+    width: calc(min(76.5rem, 90%));
+    margin-inline: auto;
     gap: 50px;
 }
 
@@ -147,6 +147,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 20px
 }
 
 #newsletter {
@@ -177,22 +178,16 @@ p {
 }
 
 #hubbbleBackground {
-    margin: unset;
-    padding: unset;
-}
-
-
-/* #foodixgifs {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: calc(min(76.5rem, 90%));
+    margin-inline: auto;
 }
 
-#foodixgifs img {
-    width: calc(33.33% - 10px);
-    object-fit: contain;
-    margin: 5px;
-} */
+#hubbbleHeader {
+    width: 100%;
+    padding: unset;
+}
 
 #finaldes {
     margin: unset;
