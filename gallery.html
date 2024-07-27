@@ -20,121 +20,79 @@
     <script src="https://kit.fontawesome.com/06a0637350.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-<!--     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" rel="stylesheet">
+
+    <style>
+
+
+        .gallery .gallery__image {
+            filter: grayscale(80%);
+        } .gallery__link:hover .gallery__image {
+            filter: grayscale(0);
         }
 
-        :root{
-            --index: calc(1vw + 1vh);
-            --transition: cubic-bezier(.1, .7, 0, 1);
-        }
-
-        body{
-            background-color: #141414;
-        }
-
-        .wrapper{
+        .gallery__column {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 80vh;
-        }
-
-        .items{
-            display: flex;
-            gap: 0.4rem;
-            perspective: calc(var(--index) * 35);
-        }
-
-        .item{
-            width: calc(var(--index) * 3);
-            height: calc(var(--index) * 12);
-            background-color: #222;
-            background-size: cover;
-            background-position: center;
-            cursor: pointer;
-            filter: grayscale(1) brightness(.5);
-            transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
-            will-change: transform, filter, rotateY, width;
-        }
-
-        .item::before, .item::after{
-            content: '';
-            position: absolute;
+            flex-direction: column;
+            width: 33.333%;
             height: 100%;
-            width: 20px;
-            right: calc(var(--index) * -1);
         }
 
-        .item::after{
-            left: calc(var(--index) * -1);
+        .gallery__link {
+            margin: 5px;
+            overflow: hidden;
         }
 
-        .items .item:hover{
-            filter: inherit;
-            transform: translateZ(calc(var(--index) * 10));
+        .gallery__thumb {
+            position: relative;
+            margin: 0;
         }
 
-        /*Right*/
-
-        .items .item:hover + *{
-            filter: inherit;
-            transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
-            z-index: -1;
+        .gallery__image {
+            display: block;
+            width: 100%;
+            transition: 0.3s;
         }
 
-        .items .item:hover + * + *{
-            filter: inherit;
-            transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
-            z-index: -2;
+        .gallery__image:hover {
+            transform: scale(1.1);
         }
 
-        .items .item:hover + * + * + *{
-            filter: inherit;
-            transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
-            z-index: -3;
+        .lb-data .lb-caption {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1em;
+            color: white;
         }
 
-        .items .item:hover + * + * + * + *{
-            filter: inherit;
-            transform: translateZ(calc(var(--index) * .6)) rotateY(15deg);
-            z-index: -4;
+        .lb-data .lb-close {
+            display: block;
+            float: right;
+            width: 30px;
+            height: 30px;
+            background: url(thumbnails/close.png) top right no-repeat;
+            opacity: 85%;
         }
 
-
-        /*Left*/
-
-        .items .item:has( + :hover){
-            filter: inherit;
-            transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
+        .contentGal {
+            display: flex;
+            flex-direction: column;
         }
 
-        .items .item:has( + * + :hover){
-            filter: inherit;
-            transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
+        .lb-data .lb-number {
+            font-family: Arial, sans-serif;
         }
 
-        .items .item:has( + * + * + :hover){
-            filter: inherit;
-            transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
+        .bodyClass {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
         }
 
-        .items .item:has( + * + * + * + :hover){
-            filter: inherit;
-            transform: translateZ(calc(var(--index) * .6)) rotateY(-15deg);
-        }
-
-        .items .item:active, .items .item:focus {
-            width: 28vw;
-            filter: inherit;
-            z-index: 100;
-            transform: translateZ(calc(var(--index) * 10));
-            margin: 0 .45vw;
-        }
-    </style> -->
+    </style>
 </head>
 <body>
   <nav>
@@ -156,44 +114,33 @@
     </ul>    
   </nav>
 
- <div class="divMain">
+<div class="divMain">
     <div class="bodyClass">
-      <div class="contentGal">
+        <div class="contentGal">
+            <h1 style="padding-left: 100px; font-family: 'League Spartan', Arial, Helvetica, sans-serif;">Art</h1>
             <div class="gallery1">
                 <div class="gallery__column">
-                    <a data-lightbox="1" data-title="Portrait - lalalove" href="images/lalalove.png" class="gallery__link">
+                    <a data-lightbox="2" data-title="Portrait - lalalove" href="images/lalalove.png" class="gallery__link">
                         <figure class="gallery__thumb">
                             <img src="images/lalalove.png" alt="Portrait of lalalove" class="gallery__image">
                         </figure>
                     </a>
-                    
-                    <a data-lightbox="2" data-title="Portrait - Greyscale" href="images/gold.png" class="gallery__link">
-                        <figure class="gallery__thumb">
-                            <img src="images/gold.png" alt="Black and White" class="gallery__image">
-                        </figure>
-                    </a>
             
-                    <a data-lightbox="3" data-title="Commission - Celice" href="images/kimiandpuchi.png" class="gallery__link">
+                    <a data-lightbox="2" data-title="Commission" href="images/kimiandpuchi.png" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="images/kimiandpuchi.png" alt="Celice" class="gallery__image">
+                            <img src="images/kimiandpuchi.png" alt="Commission" class="gallery__image">
                         </figure>
                     </a>
                 </div>
             
                 <div class="gallery__column">
-                    <a data-lightbox="4" data-title="Kimi and Puchi" href="images/BW.png" class="gallery__link">
+                    <a data-lightbox="2" data-title="Portrait" href="images/BW.png" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="images/BW.png" alt="SCOTL" class="gallery__image">
-                        </figure>
-                    </a>
-            
-                    <a data-lightbox="6" data-title="Halo" href="images/profile2.png" class="gallery__link">
-                        <figure class="gallery__thumb">
-                            <img src="images/profile2.png" alt="Halo2" class="gallery__image">
+                            <img src="images/BW.png" alt="Portrait" class="gallery__image">
                         </figure>
                     </a>
     
-                    <a data-lightbox="7" data-title="Commision - Profile" href="images/profile1.png" class="gallery__link">
+                    <a data-lightbox="2" data-title="Commision - Profile" href="images/profile1.png" class="gallery__link">
                         <figure class="gallery__thumb">
                             <img src="images/profile1.png" alt="profileimg" class="gallery__image">
                         </figure>
@@ -202,98 +149,153 @@
                 </div>
             
                 <div class="gallery__column">
-                    <a data-lightbox="8" data-title="vogue" href="images/vogue.png" class="gallery__link">
+                    <a data-lightbox="2" data-title="Vogue" href="images/vogue.png" class="gallery__link">
                         <figure class="gallery__thumb">
                             <img src="images/vogue.png" alt="vogue" class="gallery__image">
                         </figure>
-                    </a>
-                    <a data-lightbox="9" data-title="Portrait Studies - Orange" href="images/3dBath.png" class="gallery__link">
-                        <figure class="gallery__thumb">
-                            <img src="images/3dBath.png" alt="Orange" class="gallery__image">
-                        </figure>
-                    </a>
-    
-                    <a data-lightbox="10" data-title="Commision - Celice Profile" href="images/Kitchen8.png" class="gallery__link">
-                        <figure class="gallery__thumb">
-                            <img src="images/Kitchen8.png" alt="Celice2" class="gallery__image">
-                        </figure>
-                    </a>
-    
-                    <a data-lightbox="11" data-title="Sleepy, Cookies, Celice" href="images/FryPanEgg7.png" class="gallery__link">
-                        <figure class="gallery__thumb">
-                            <img src="images/FryPanEgg7.png" alt="celiskep" class="gallery__image">
-                        </figure>
-                    </a>
-            
-                    <a data-lightbox="5" data-title="Moonlight" href="images/MaxieCollage_page-0001.jpg" class="gallery__link">
+                    </a>     
+                    <a data-lightbox="2" data-title="A gift for my sister" href="images/MaxieCollage_page-0001.jpg" class="gallery__link">
                       <figure class="gallery__thumb">
-                          <img src="images/MaxieCollage_page-0001.jpg" alt="Halo" class="gallery__image">
+                          <img src="images/MaxieCollage_page-0001.jpg" alt="gift" class="gallery__image">
                       </figure>
-                  </a>
+                    </a>
                 </div>
 
                 <div class="gallery__column">
-                  <a data-lightbox="12" data-title="Solitude" href="images/hand.png" class="gallery__link">
+                  <a data-lightbox="2" data-title="Hand" href="images/hand.png" class="gallery__link">
                       <figure class="gallery__thumb">
-                          <img src="images/hand.png" alt="Solitude" class="gallery__image">
+                          <img src="images/hand.png" alt="Hand" class="gallery__image">
                       </figure>
                   </a>
-                  <a data-lightbox="13" data-title="Portrait Studies - Orange" href="images/Sky-Kids (1).png" class="gallery__link">
+                  <a data-lightbox="2" data-title="Sky: Children of the Light" href="images/Sky-Kids (1).png" class="gallery__link">
                       <figure class="gallery__thumb">
-                          <img src="images/Sky-Kids (1).png" alt="Orange" class="gallery__image">
-                      </figure>
-                  </a>
-  
-                  <a data-lightbox="14" data-title="Commision - Celice Profile" href="images/celicedesign.png" class="gallery__link">
-                      <figure class="gallery__thumb">
-                          <img src="images/celicedesign.png" alt="Celice2" class="gallery__image">
+                          <img src="images/Sky-Kids (1).png" alt="Sky" class="gallery__image">
                       </figure>
                   </a>
               </div>
 
               <div class="gallery__column">
-                <a data-lightbox="15" data-title="Solitude" href="images/solitude.png" class="gallery__link">
+                <a data-lightbox="2" data-title="Solitude" href="images/solitude.png" class="gallery__link">
                     <figure class="gallery__thumb">
                         <img src="images/solitude.png" alt="Solitude" class="gallery__image">
                     </figure>
                 </a>
-                <a data-lightbox="16" data-title="Portrait Studies - Orange" href="images/orange.png" class="gallery__link">
-                    <figure class="gallery__thumb">
-                        <img src="images/orange.png" alt="Orange" class="gallery__image">
-                    </figure>
-                </a>
 
-                <a data-lightbox="17" data-title="Commision - Celice Profile" href="images/ISOMETRIC DESIGN.png" class="gallery__link">
+                <a data-lightbox="2" data-title="Isometric" href="images/ISOMETRIC DESIGN.png" class="gallery__link">
                     <figure class="gallery__thumb">
-                        <img src="images/ISOMETRIC DESIGN.png" alt="Celice2" class="gallery__image">
+                        <img src="images/ISOMETRIC DESIGN.png" alt="Isometric" class="gallery__image">
                     </figure>
                 </a>
+                </div>
+
+                <div class="gallery__column">
+                    <a data-lightbox="2" data-title="Portrait Studies - Orange" href="images/orange.png" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="images/orange.png" alt="Orange" class="gallery__image">
+                        </figure>
+                    </a>
+                                
+                    <a data-lightbox="2" data-title="Halo" href="images/profile2.png" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="images/profile2.png" alt="Halo2" class="gallery__image">
+                        </figure>
+                    </a>
+
+                </div>
+
+                <div class="gallery__column">  
+                    <a data-lightbox="2" data-title="Portrait - Greyscale" href="images/gold.png" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="images/gold.png" alt="Black and White" class="gallery__image">
+                        </figure>
+                    </a>
+                      
+                  <a data-lightbox="2" data-title="Commision - Celice Profile" href="images/celicedesign.png" class="gallery__link">
+                    <figure class="gallery__thumb">
+                        <img src="images/celicedesign.png" alt="Celice2" class="gallery__image">
+                    </figure>
+                </a>
+                </div>
             </div>
+        </div>
+
+        <div class="contentGal">
+            <h1 style="padding-left: 100px; font-family: 'League Spartan', Arial, Helvetica, sans-serif;">3D Design</h1>
+            <div class="gallery1">
+                <div class="gallery__column">
+                    <a data-lightbox="3" data-title="Flower Pot" href="images/3d/1.jpg" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="images/3d/1.jpg" alt="Portrait of lalalove" class="gallery__image">
+                        </figure>
+                    </a>
+                    <a data-lightbox="3" data-title="Bathroom" href="images/3d/3dBath.png" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="images/3d/3dBath.png" alt="SCOTL" class="gallery__image">
+                        </figure>
+                    </a>
+                </div>
+            
+                <div class="gallery__column">
+                    <a data-lightbox="3" data-title="Egg Fried Pan (?!)" href="images/3d/FryPanEgg7.png" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="images/3d/FryPanEgg7.png" alt="vogue" class="gallery__image">
+                        </figure>
+                    </a>
+                    <a data-lightbox="3" data-title="Kitchen" href="images/3d/Kitchen8.png" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="images/3d/Kitchen8.png" alt="Solitude" class="gallery__image">
+                        </figure>
+                    </a>
+                    
+                </div>
+            
+                <div class="gallery__column">
+                    <a data-lightbox="3" data-title="Froggy in a Jar" href="images/3d/froggy.png" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="images/3d/froggy.png" alt="Solitude" class="gallery__image">
+                        </figure>
+                    </a>
+                    <a data-lightbox="3" data-title="Fluffy Pancakes" href="images/3d/pancake.png" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="images/3d/pancake.png" alt="Solitude" class="gallery__image">
+                        </figure>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="contentGal">
+            <h1 style="padding-left: 100px; font-family: 'League Spartan', Arial, Helvetica, sans-serif;">Films</h1>
+            <div class="gallery1">
+                <div class="gallery__column">
+                    <a href="https://youtu.be/lncV3Hm5yRE" class="gallery__link" target="_blank">
+                        <figure class="gallery__thumb">
+                            <img src="thumbnails/cdm130.png" alt="CDMFinal2" class="gallery__image">
+                        </figure>
+                    </a>
+                </div>
+
+                <div class="gallery__column">
+                    <a href="https://youtu.be/-cWbEs8jbjo" class="gallery__link" target="_blank">
+                        <figure class="gallery__thumb">
+                            <img src="thumbnails/06092022.png" alt="CDMFinal" class="gallery__image">
+                        </figure>
+                    </a>
+                </div>
+
+                <div class="gallery__column">
+                    <a href="https://youtu.be/QBCSItHY074" class="gallery__link" target="_blank">
+                        <figure class="gallery__thumb">
+                            <img src="thumbnails/fish.png" alt="CDM002Final" class="gallery__image">
+                        </figure>
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
-  </div>
-
-<!--   <div class="wrapper">
-    <div class="items">
-      <div class="item" tabindex="0" style="background-image: url(images/hand.png)"></div>
-      <div class="item" tabindex="0" style="background-image: url(https://e22u.short.gy/SMBrES)"></div>
-      <div class="item" tabindex="0" style="background-image: url(https://e22u.short.gy/f8spJ8)"></div>
-      <div class="item" tabindex="0" style="background-image: url(https://e22u.short.gy/SwM7dn)"></div>
-      <div class="item" tabindex="0" style="background-image: url(https://e22u.short.gy/8Oipim)"></div>
-      <div class="item" tabindex="0" style="background-image: url(https://e22u.short.gy/BWYQgv)"></div>
-      <div class="item" tabindex="0" style="background-image: url(https://e22u.short.gy/KzNDfr)"></div>
-      <div class="item" tabindex="0" style="background-image: url(https://e22u.short.gy/ne5nuX)"></div>
-      <div class="item" tabindex="0" style="background-image: url(https://e22u.short.gy/cwZrVj)"></div>
-      <div class="item" tabindex="0" style="background-image: url(https://e22u.short.gy/Xvf2a1)"></div>
-      <div class="item" tabindex="0" style="background-image: url(https://e22u.short.gy/pCrIJq)"></div>
-      <div class="item" tabindex="0" style="background-image: url(https://e22u.short.gy/mSLCrl)"></div>
-      <div class="item" tabindex="0" style="background-image: url(https://e22u.short.gy/EwQcy5)"></div>
-        
-      </div>
-        
-      </div> -->
-
+</div>
 
   <footer>
         <p>Desgined + Coded by Maggie Ma</p>

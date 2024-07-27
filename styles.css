@@ -356,7 +356,7 @@ nav ul li a:hover {
 .grid {
   width: min-content;
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(4, 300px);
   grid-auto-rows: 300px;
   gap: 1rem;
 }
@@ -489,7 +489,7 @@ nav ul li a:hover {
 
 /* Styling the Content inside box */
 .box-box > p {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   opacity: 0.85;
 }
