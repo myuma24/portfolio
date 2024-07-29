@@ -551,14 +551,6 @@ nav ul li a:hover {
 }
 
 
-#work, #exploreHeader, #aboutme, #resources, #otherHeader {
-  font-family: 'League Spartan';
-  font-weight: bold;
-  font-size: 40px;
-  padding-top: 75px;
-}
-
-
 /* Footer */
 footer {
   height: 111px;
@@ -617,12 +609,10 @@ background-color: #868686;
 #aboutMe {
   display: flex;
   flex-direction: row;
-  gap: 200px;
-  padding-top: 100px;
-
-  padding-left: 20%;
-  padding-right: 20%;
-  
+  width: 65%;
+  margin: auto;
+  gap: 20%;
+  padding-top: 70px;
 }
 
 #mainAB {
