@@ -22,6 +22,41 @@
     git commit -m "name"
     git push -->
 
+
+    <style>
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 25px;
+        }
+  
+        .card {
+            width: 300px;
+            height: 300px;
+        }
+
+        .card h2 {
+            padding-bottom: 20px;
+        }
+
+        #hobbies {
+            display: flex;
+            flex-direction: column;
+            width: 65%;
+            margin: auto;
+            gap: 20%;
+            padding-top: 20px;
+        }
+
+        img {
+            width: 275px;
+            height: 275px;
+            object-fit: cover;
+        }
+        
+    </style>
+
 </head>
 <body>
     <nav>
@@ -47,7 +82,7 @@
     <section id = "aboutMe">
         <div id = "aboutSec">
             <h1 id = "mainAB">About Me</h1>
-            <p class = "mDes">I'm Maggie, a 21-year-old explorer with a love for anything penguin and cat related. A curious soul navigating the currents of life, I'm always seeking to uncover the exceptional in the seemingly mundane. By day I am a design student at UC Davis, currently on a quest to explore the unexplored, push the boundaries of design, and create journeys not just about the destination, but also the conversations made along the way.</p>
+            <p class = "mDes">I'm Maggie, a 22-year-old explorer with a love for anything penguin and cat related. A curious soul navigating the currents of life, I'm always seeking to uncover the exceptional in the seemingly mundane. By day I am a design student at UC Davis, currently on a quest to explore the unexplored, push the boundaries of design, and create journeys not just about the destination, but also the conversations made along the way.</p>
             <p class = "mDes">This portfolio highlights many of the things I’ve done throughout my education, my personal hobbies, and my career. I'm big on learning new things and gaining new skills, from painting, 3D designing, to coding my own portfolio, curiosity has always kept my creativity juices flowing. I love to share new ideas, gain new insight, and learn from different minds, please don't hesitate to reach out! A good conversation marks the start of a lifelong friendship.</p>
             <div id = "resume">
                 <div id = "education">
@@ -105,6 +140,27 @@
         </div>
     </section>
 
+    <section id = "hobbies">
+        <h1 style="font-family: 'League Spartan', sans-serif;">On my free time I'm...</h1>
+        <div class="card-container">
+            <div class="card">
+                <h2>Cooking</h2>
+                <img src = "thumbnails/cooking.png" alt = "cooking">
+            </div>
+            <div class="card">
+                <h2>Painting</h2>
+                <img src = "thumbnails/painting.png" alt = "painting">
+            </div>
+            <div class="card">
+                <h2>Crocheting</h2>
+                <img src = "thumbnails/crocheting.png" alt = "crocheting">
+            </div>
+            <div class="card">
+                <h2>Exploring</h2>
+                <img src = "thumbnails/exploring.png" alt = "exploring">
+            </div>
+        </div>
+    </section>
     <footer>
         <p>Desgined + Coded by Maggie Ma</p>
         <div class ="socialmedia"><a href = "https://www.linkedin.com/in/maggiema209/" target="_blank"><i class="fab fa-linkedin fa-xl"></i></i></a></div>
