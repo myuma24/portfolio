@@ -19,6 +19,70 @@
 
     <script src="script.js" defer=""></script>
     <link rel="stylesheet" href="styles.css" />
+
+
+    <style>
+       .parent {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Ensure the parent container has a defined height */
+            height: 100vh; /* Example: Full viewport height */
+        }
+
+        .loader {
+        --uib-size: 47px;
+        --uib-color: rgb(255, 255, 255);
+        --uib-speed: 1s;
+        --uib-dot-size: calc(var(--uib-size) * 0.18);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: calc(var(--uib-size) * 0.5);
+        width: var(--uib-size);
+        margin: auto;
+        }
+    
+        .dot {
+        flex-shrink: 0;
+        width: calc(var(--uib-size) * 0.17);
+        height: calc(var(--uib-size) * 0.17);
+        border-radius: 50%;
+        background-color: var(--uib-color);
+        transition: background-color 0.3s ease;
+        }
+    
+        .dot:nth-child(1) {
+        animation: jump var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.45)
+            infinite;
+        }
+    
+        .dot:nth-child(2) {
+        animation: jump var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.3)
+            infinite;
+        }
+    
+        .dot:nth-child(3) {
+        animation: jump var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.15)
+            infinite;
+        }
+    
+        .dot:nth-child(4) {
+        animation: jump var(--uib-speed) ease-in-out infinite;
+        }
+    
+        @keyframes jump {
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+    
+        50% {
+            transform: translateY(-200%);
+        }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -40,7 +104,17 @@
     </ul>
   </nav>
 
-  <header>
+  <div class = "parent">
+    <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+  </div>
+
+
+  <header class = "headerSc">
     <div id = "info">
         <p id = "intro">Hello I'm,</p>
         <div id = "nameDiv">
@@ -276,6 +350,34 @@
     <div class ="socialmedia"><a href = "https://www.linkedin.com/in/maggiema209/" target="_blank"><i class="fab fa-linkedin fa-xl"></i></i></a></div>
   </footer>
 </body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to check if all images are loaded
+    const checkImagesLoaded = () => {
+      let imagesLoaded = document.images.length;
+      let totalImages = document.querySelectorAll('img').length;
+  
+      return imagesLoaded === totalImages;
+    };
+  
+    // Show loader initially
+    document.querySelector('.parent').style.display = 'flex';
+    document.querySelector('.sectionStyles').style.display = 'none';
+    document.querySelector('.headerSc').style.display = 'none';
+  
+    // Hide loader when all images are loaded
+    window.addEventListener('load', function() {
+      setTimeout(() => {
+        if (checkImagesLoaded()) {
+          document.querySelector('.parent').style.display = 'none';
+          document.querySelector('.sectionStyles').style.display = 'block';
+          document.querySelector('.headerSc').style.display = 'flex';
+        }
+      }, 500); // Delay to ensure all images are accounted for
+    });
+  });
+</script>
 </html>
 
 

@@ -25,8 +25,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" rel="stylesheet">
 
     <style>
-
-
         .gallery .gallery__image {
             filter: grayscale(80%);
         } .gallery__link:hover .gallery__image {
@@ -91,7 +89,67 @@
             flex-direction: column;
             gap: 40px;
         }
+        
 
+        .parent {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Ensure the parent container has a defined height */
+            height: 100vh; /* Example: Full viewport height */
+        }
+
+        .loader {
+        --uib-size: 47px;
+        --uib-color: rgb(255, 255, 255);
+        --uib-speed: 1s;
+        --uib-dot-size: calc(var(--uib-size) * 0.18);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: calc(var(--uib-size) * 0.5);
+        width: var(--uib-size);
+        margin: auto;
+        }
+    
+        .dot {
+        flex-shrink: 0;
+        width: calc(var(--uib-size) * 0.17);
+        height: calc(var(--uib-size) * 0.17);
+        border-radius: 50%;
+        background-color: var(--uib-color);
+        transition: background-color 0.3s ease;
+        }
+    
+        .dot:nth-child(1) {
+        animation: jump var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.45)
+            infinite;
+        }
+    
+        .dot:nth-child(2) {
+        animation: jump var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.3)
+            infinite;
+        }
+    
+        .dot:nth-child(3) {
+        animation: jump var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.15)
+            infinite;
+        }
+    
+        .dot:nth-child(4) {
+        animation: jump var(--uib-speed) ease-in-out infinite;
+        }
+    
+        @keyframes jump {
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+    
+        50% {
+            transform: translateY(-200%);
+        }
+        }
     </style>
 </head>
 <body>
@@ -113,6 +171,15 @@
       </li>    
     </ul>    
   </nav>
+
+  <div class = "parent">
+    <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+  </div>
 
 <div class="divMain">
     <div class="bodyClass">
@@ -183,6 +250,11 @@
                     <a data-lightbox="2" data-title="" href="images/marketing/merch/stickerCow.jpg" class="gallery__link">
                         <figure class="gallery__thumb">
                             <img src="images/marketing/merch/stickerCow.jpg" alt="Portrait" class="gallery__image">
+                        </figure>
+                    </a>
+                    <a data-lightbox="2" data-title="" href="images/marketing/merch/rsscSticker.png" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="images/marketing/merch/rsscSticker.png" alt="Portrait" class="gallery__image">
                         </figure>
                     </a>
                 </div>
@@ -282,9 +354,9 @@
                         </figure>
                     </a>
 
-                    <a data-lightbox="2" data-title="" href="images/marketing/WK4 (1).png" class="gallery__link">
+                    <a data-lightbox="2" data-title="" href="images/marketing/Instagram_Slide_Post_12.png" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="images/marketing/WK4 (1).png" alt="Hand" class="gallery__image">
+                            <img src="images/marketing/Instagram_Slide_Post_12.png" alt="Hand" class="gallery__image">
                         </figure>
                     </a>
                 </div>
@@ -505,6 +577,11 @@
                             <img src="images/marketing/other/Transfer Lobby Day.png" alt="Portrait" class="gallery__image">
                         </figure>
                     </a>
+                    <a data-lightbox="2" data-title="" href="images/marketing/other/TV_.png" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="images/marketing/other/TV_.png" alt="Portrait" class="gallery__image">
+                        </figure>
+                    </a>
                 </div>
 
             </div>
@@ -518,4 +595,30 @@
   </footer>
 
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Function to check if all images are loaded
+      const checkImagesLoaded = () => {
+        let imagesLoaded = document.images.length;
+        let totalImages = document.querySelectorAll('img').length;
+    
+        return imagesLoaded === totalImages;
+      };
+    
+      // Show loader initially
+      document.querySelector('.parent').style.display = 'flex';
+      document.querySelector('.divMain').style.display = 'none';
+    
+      // Hide loader when all images are loaded
+      window.addEventListener('load', function() {
+        setTimeout(() => {
+          if (checkImagesLoaded()) {
+            document.querySelector('.parent').style.display = 'none';
+            document.querySelector('.divMain').style.display = 'block';
+          }
+        }, 500); // Delay to ensure all images are accounted for
+      });
+    });
+  </script>
 </html>
