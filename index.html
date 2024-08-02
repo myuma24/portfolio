@@ -363,7 +363,9 @@
   
     // Show loader initially
     document.querySelector('.parent').style.display = 'flex';
-    document.querySelector('.sectionStyles').style.display = 'none';
+    document.querySelector('#section1').style.display = 'none';
+    document.querySelector('#section2').style.display = 'none';
+    document.querySelector('#discover').style.display = 'none';
     document.querySelector('.headerSc').style.display = 'none';
   
     // Hide loader when all images are loaded
@@ -371,7 +373,9 @@
       setTimeout(() => {
         if (checkImagesLoaded()) {
           document.querySelector('.parent').style.display = 'none';
-          document.querySelector('.sectionStyles').style.display = 'block';
+          document.querySelector('#section1').style.display = 'block';
+          document.querySelector('#section2').style.display = 'block';
+          document.querySelector('#discover').style.display = 'block';
           document.querySelector('.headerSc').style.display = 'flex';
         }
       }, 500); // Delay to ensure all images are accounted for
