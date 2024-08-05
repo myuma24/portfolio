@@ -39,7 +39,7 @@
 
     graphitecture.addEventListener('click', function() {
         // Redirect the user to the desired link
-        window.location.href = 'graphitecture.html';
+        window.location.href = 'feed.html';
     });
 
     croukets.addEventListener('click', function() {
