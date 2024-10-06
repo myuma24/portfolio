@@ -67,6 +67,4 @@
         window.location.href = 'gamedesign.html';
     }); 
 
-
-    
 })();
