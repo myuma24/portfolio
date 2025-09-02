@@ -22,15 +22,20 @@
 
 
     <style>
-       .parent {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* Ensure the parent container has a defined height */
-            height: 100vh; /* Example: Full viewport height */
-        }
 
-        .loader {
+      html {
+        scroll-behavior: smooth;
+      }
+       
+      .parent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Ensure the parent container has a defined height */
+        height: 100vh; /* Example: Full viewport height */
+      }
+
+      .loader {
         --uib-size: 47px;
         --uib-color: rgb(255, 255, 255);
         --uib-speed: 1s;
@@ -41,7 +46,7 @@
         height: calc(var(--uib-size) * 0.5);
         width: var(--uib-size);
         margin: auto;
-        }
+      }
     
         .dot {
         flex-shrink: 0;
@@ -87,7 +92,7 @@
 
 <body>
   <nav>
-    <img src = "images/logo2.png" alt = "logo" id = "logo">
+    <a href="index.html"><img src = "images/logo2.png" alt = "logo" id = "logo"></a>
     <ul>
       <li class="dropdown">
         <a href="index.html">Home</a>
@@ -121,11 +126,8 @@
             <h1 data-text="Maggie Ma" id = "name"><a href = "about.html">Maggie Ma</a></h1>
         </div>
         <p id = "description">UI/UX Designer looking for the extraordinary in a sea of ordinary.</p>
-        <i class="fa-solid fa-circle-arrow-down fa-bounce fa-2xl" style="color: #ef6f6c; padding-top: 70px;"></i>
+        <a href="#section1"><i class="fa-solid fa-circle-arrow-down fa-bounce fa-2xl" style="color: #ef6f6c; padding-top: 70px;"></i></a>
     </div>
-<!--     <div>
-      <img src="images/homeimg.png" alt = "homeIMG" id = "headerImg">
-    </div> -->
   </header>
 
   <section id = "section1" class = "sectionStyles">
