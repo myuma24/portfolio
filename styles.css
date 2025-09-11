@@ -711,7 +711,7 @@ background-color: #868686;
 #resourceList {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 500px;
 }
 
 #resourceList a {
